@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ev Fiyat Tahmini</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(207, 197, 185);
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8); /* Arkaplanın opaklığını ayarlamak için */
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 100px; /* Formu sayfanın ortasına yerleştirmek için */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">Ev Fiyat Tahmini</h1>
+        <form action="/predict" method="post">
+            <div class="mb-3 row">
+                <label for="oda_sayisi" class="col-sm-4 col-form-label">Oda Sayısı:</label>
+                <div class="col-sm-8">
+                    <input type="number" id="oda_sayisi" name="oda_sayisi" class="form-control">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="kat" class="col-sm-4 col-form-label">Kat:</label>
+                <div class="col-sm-8">
+                    <input type="number" id="kat" name="kat" class="form-control">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="metrekare" class="col-sm-4 col-form-label">Metrekare:</label>
+                <div class="col-sm-8">
+                    <input type="number" id="metrekare" name="metrekare" class="form-control">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="konum" class="col-sm-4 col-form-label">Konum:</label>
+                <div class="col-sm-8">
+                    <input type="number" id="konum" name="konum" class="form-control">
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="submit" value="Tahmin Et" class="btn btn-outline-warning">Fiyat Hesapla</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS ve Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
